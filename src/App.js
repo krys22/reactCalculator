@@ -23,12 +23,10 @@ class App extends Component{
       previous.push(this.state.current + symbol);
       this.setState({previous, nextIsReset:true});
     }else{
-      console.log("Hha")
-      console.log(this.state.current)
+      
       if((this.state.current === "0" && symbol !== ".") || this.state.nextIsReset){
-        console.log("Gets")
-        console.log(symbol)
-        this.setState({current: 'ieie', nextIsReset:false});
+        
+        this.setState({current: symbol, nextIsReset:false});
       }
       this.setState({current: this.state.current + symbol});
     }
